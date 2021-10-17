@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2018 The LineageOS Project
+                   2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -33,30 +33,37 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
-        <receiver android:name=".BootCompletedReceiver">
+        <receiver
+            android:name=".BootCompletedReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".doze.DozeService"
-                 android:permission="LenovoDozeService">
+        <service
+            android:name=".doze.DozeService"
+            android:permission="LenovoDozeService"
+            android:exported="true">
         </service>
 
         <service
             android:name=".thermal.ThermalService"
-            android:permission="ThermalService">
+            android:permission="ThermalService"
+            android:exported="true">
         </service>
 
         <activity
             android:name=".doze.DozeSettingsActivity"
+            android:exported="false"
             android:label="@string/ambient_display_title"
             android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
         <activity
             android:name=".speaker.ClearSpeakerActivity" 
+            android:exported="false"
             android:label="@string/clear_speaker_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
@@ -69,6 +76,7 @@
 
         <activity
             android:name=".thermal.ThermalActivity"
+            android:exported="false"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
