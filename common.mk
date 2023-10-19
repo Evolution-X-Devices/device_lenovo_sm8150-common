@@ -403,10 +403,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-zuicamera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-zuicamera.xml
 
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -433,10 +429,6 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl \
     libxml2
-
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite-vendorcompat \
-    libprotobuf-cpp-full-vendorcompat
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -489,6 +481,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
 # VNDK
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
+
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
 
