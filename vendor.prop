@@ -62,7 +62,7 @@ camera.disable_zsl_mode=1
 vendor.camera.packagename.zui=1
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM8150
 
 # Crypto
