@@ -1,6 +1,6 @@
 type sysfs_tp, fs_type, sysfs_type;
 type sysfs_vl53l1, sysfs_type, fs_type;
-type system_camera_file, file_type;
+type system_camera_file, file_type, system_file_type;
 type sysfs_device_info, sysfs_type, fs_type;
 
 # for PowerHal
