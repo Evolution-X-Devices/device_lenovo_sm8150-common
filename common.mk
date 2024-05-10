@@ -22,6 +22,9 @@ $(call inherit-product-if-exists, vendor/lenovo/sm8150-common/sm8150-common-vend
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# Do not enforce-product-package-exists
+TARGET_DISABLE_EPPE := true
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
