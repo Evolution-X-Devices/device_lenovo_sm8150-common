@@ -163,6 +163,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sysconfig/preinstalled-packages-platform-lenovo-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-lenovo-product.xml
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
