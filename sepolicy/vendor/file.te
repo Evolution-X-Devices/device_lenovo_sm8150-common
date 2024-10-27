@@ -5,3 +5,6 @@ type sysfs_device_info, sysfs_type, fs_type;
 
 # for PowerHal
 type proc_sched_energy_aware, proc_type, fs_type;
+
+# Define file types used by pixel powerhal and powerstats
+type sysfs_msm_subsys, sysfs_type, fs_type;
