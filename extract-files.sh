@@ -61,6 +61,9 @@ fi
 function blob_fixup() {
     case "${1}" in
     # Use libprotobuf-cpp-full-3.9.1
+    vendor/lib64/hw/camera.qcom.so)
+        sed -i "s|libc++.so|libc29.so|g" "${2}"
+    ;;
     vendor/lib64/mediadrm/libwvdrmengine.so
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
     ;;

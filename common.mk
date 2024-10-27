@@ -154,15 +154,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.frameworks.displayservice@1.0.vendor \
+    libc29.vendor \
     libdng_sdk \
     libgui_vendor \
     libqti-perfd-client \
     libpng.vendor:32 \
     libutilscallstack.vendor:64 \
     libxml2
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
 
 # Clone apps exemption
 PRODUCT_COPY_FILES += \
